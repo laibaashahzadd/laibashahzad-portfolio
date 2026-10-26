@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laiba Shahzad — Portfolio</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN for Analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navyDeep: {
+                            950: '#070a14',
+                            900: '#0a0f1d',
+                            850: '#0f172a',
+                        },
+                        blueGray: {
+                            900: '#131b2e',
+                            850: '#1c2541',
+                            800: '#233054',
+                            700: '#2e3d66'
+                        },
+                        purpleAccent: {
+                            300: '#d8b4fe',
+                            400: '#c084fc',
+                            500: '#a855f7',
+                            600: '#9333ea',
+                            700: '#7e22ce'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0f1d;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1c2541;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a855f7;
+        }
+    </style>
+</head>
+<body class="bg-navyDeep-900 text-slate-100 font-sans antialiased selection:bg-purpleAccent-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+    <nav class="fixed top-0 left-0 w-full z-40 bg-navyDeep-900/90 backdrop-blur-md border-b border-blueGray-850">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="text-xl font-extrabold tracking-widest text-white hover:text-purpleAccent-400 transition-colors">
+                LAIBA <span class="text-purpleAccent-400">SHAHZAD</span>
+            </a>
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-purpleAccent-400 transition-colors">About</a>
+                <a href="#skills" class="hover:text-purpleAccent-400 transition-colors">Skills</a>
+                <a href="#analytics" class="hover:text-purpleAccent-400 transition-colors">Analytics</a>
+                <a href="#bring-to-table" class="hover:text-purpleAccent-400 transition-colors">What I Bring</a>
+                <a href="#education" class="hover:text-purpleAccent-400 transition-colors">Education</a>
+                <a href="#projects" class="hover:text-purpleAccent-400 transition-colors">Projects</a>
+            </div>
+            <a href="#contact" class="bg-gradient-to-r from-purpleAccent-500 to-purpleAccent-700 hover:from-purpleAccent-400 hover:to-purpleAccent-600 text-white font-bold px-4 py-2 rounded-lg text-xs uppercase tracking-wider transition-all shadow-lg shadow-purpleAccent-500/20 active:scale-95">
+                Contact Me
+            </a>
+        </div>
+    </nav>
+
+    <section id="about" class="pt-36 pb-20 relative overflow-hidden bg-gradient-to-b from-navyDeep-950 via-navyDeep-900 to-navyDeep-900">
+        <div class="max-w-5xl mx-auto px-6 text-center flex flex-col items-center">
+            
+            <div class="relative mb-6">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-purpleAccent-400 p-1 bg-blueGray-850 shadow-2xl shadow-purpleAccent-500/20 flex items-center justify-center text-3xl font-extrabold text-purpleAccent-400">
+                    LS
+                </div>
+                <span class="absolute bottom-2 right-2 w-4 h-4 bg-purpleAccent-400 border-2 border-navyDeep-950 rounded-full animate-pulse" title="Open for Projects & Collaborations"></span>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-2 mb-4">
+                <span class="bg-blueGray-850/90 text-purpleAccent-300 border border-blueGray-800 text-xs px-3 py-1 rounded-full font-medium flex items-center gap-1.5">
+                    <i class="fa-solid fa-graduation-cap text-purpleAccent-400"></i> Indus University Student
+                </span>
+                <span class="bg-blueGray-850/90 text-purpleAccent-300 border border-blueGray-800 text-xs px-3 py-1 rounded-full font-medium flex items-center gap-1.5">
+                    <i class="fa-solid fa-laptop-code text-purpleAccent-400"></i> BSSE 4th Semester
+                </span>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-4">Laiba Shahzad</h1>
+            <p class="text-purpleAccent-400 font-semibold text-sm md:text-lg mb-6 max-w-3xl">
+                BSSE Student at Indus University | 4th Semester
+            </p>
+            <p class="text-slate-300 max-w-3xl leading-relaxed mb-8 text-sm md:text-base">
+                Software Engineering student at Indus University with practical experience in Data Verification & Management, Software Engineering principles, and system automation. Focused on software quality, efficient data logic, and building functional software applications.
+            </p>
+
+            <div class="flex gap-4 mb-8">
+                <a href="https://linkedin.com" target="_blank" class="w-10 h-10 rounded-lg bg-blueGray-850 border border-blueGray-800 flex items-center justify-center text-slate-300 hover:text-purpleAccent-400 hover:border-purpleAccent-500 transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com" target="_blank" class="w-10 h-10 rounded-lg bg-blueGray-850 border border-blueGray-800 flex items-center justify-center text-slate-300 hover:text-purpleAccent-400 hover:border-purpleAccent-500 transition-all"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:laiba.shahzad@example.com" class="w-10 h-10 rounded-lg bg-blueGray-850 border border-blueGray-800 flex items-center justify-center text-slate-300 hover:text-purpleAccent-400 hover:border-purpleAccent-500 transition-all"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#projects" class="bg-purpleAccent-600 hover:bg-purpleAccent-500 text-white font-bold px-6 py-3 rounded-lg text-sm transition-all shadow-lg shadow-purpleAccent-500/20"><i class="fa-solid fa-code mr-2"></i>View Projects</a>
+                <a href="#contact" class="bg-blueGray-850 hover:bg-blueGray-800 border border-blueGray-700 text-white font-bold px-6 py-3 rounded-lg text-sm transition-all"><i class="fa-solid fa-paper-plane mr-2"></i>Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-8 bg-blueGray-900/60 border-y border-blueGray-850">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div class="p-3 bg-blueGray-850/80 rounded-xl border border-blueGray-800">
+                <h3 class="font-bold text-purpleAccent-400 text-sm md:text-base">Indus University</h3>
+                <p class="text-xs text-slate-300 mt-1">BSSE 4th Semester</p>
+            </div>
+            <div class="p-3 bg-blueGray-850/80 rounded-xl border border-blueGray-800">
+                <h3 class="font-bold text-purpleAccent-400 text-sm md:text-base">Bahria College</h3>
+                <p class="text-xs text-slate-300 mt-1">Intermediate Education</p>
+            </div>
+            <div class="p-3 bg-blueGray-850/80 rounded-xl border border-blueGray-800">
+                <h3 class="font-bold text-purpleAccent-400 text-sm md:text-base">Bahria School</h3>
+                <p class="text-xs text-slate-300 mt-1">FSc / Secondary School</p>
+            </div>
+            <div class="p-3 bg-blueGray-850/80 rounded-xl border border-blueGray-800">
+                <h3 class="font-bold text-purpleAccent-400 text-sm md:text-base">Data Specialist</h3>
+                <p class="text-xs text-slate-300 mt-1">Verification & Management</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-extrabold text-white mb-2">Core Technical Skills</h2>
+            <p class="text-slate-400 text-sm mb-10">Categorized breakdown of programming languages, core engineering domains, and systems.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Skill Card 1 -->
+                <div class="bg-blueGray-850 border border-blueGray-800 p-6 rounded-2xl hover:border-purpleAccent-500/50 transition-all">
+                    <h3 class="text-purpleAccent-400 font-bold text-base mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-code text-xs"></i> Programming Languages
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-navyDeep-900 border border-blueGray-800 text-slate-200 text-xs px-3 py-1.5 rounded-lg font-medium">Python</span>
+                        <span class="bg-navyDeep-900 border border-blueGray-800 text-slate-200 text-xs px-3 py-1.5 rounded-lg font-medium">C++</span>
+                        <span class="bg-navyDeep-900 border border-blueGray-800 text-slate-200 text-xs px-3 py-1.5 rounded-lg font-medium">Java</span>
+                        <span class="bg-navyDeep-900 border border-blueGray-800 text-slate-200 text-xs px-3 py-1.5 rounded-lg font-medium">JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="bg-blueGray-850 border border-blueGray-800 p-6 rounded-2xl hover:border-purpleAccent-500/50 transition-all">
+                    <h3 class="text-purpleAccent-400 font-bold text-base mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-layer-group text-xs"></i> Core Domains
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-purpleAccent-950/80 border border-purpleAccent-800/80 text-purpleAccent-300 text-xs px-3 py-1.5 rounded-lg font-bold">Data Verification and Management</span>
+                        <span class="bg-navyDeep-900 border border-blueGray-800 text-slate-200 text-xs px-3 py-1.5 rounded-lg font-medium">Software Engineering</span>
+                        <span class="bg-navyDeep-900 border border-blueGray-800 text-slate-200 text-xs px-3 py-1.5 rounded-lg font-medium">Data Structures & Algorithms</span>
+                    </div>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="bg-blueGray-850 border border-blueGray-800 p-6 rounded-2xl hover:border-purpleAccent-500/50 transition-all">
+                    <h3 class="text-purpleAccent-400 font-bold text-base mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-cubes text-xs"></i> Engineering Concepts
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-navyDeep-900 border border-blueGray-800 text-slate-200 text-xs px-3 py-1.5 rounded-lg font-medium">Object-Oriented Programming (OOP)</span>
+                        <span class="bg-navyDeep-900 border border-blueGray-800 text-slate-200 text-xs px-3 py-1.5 rounded-lg font-medium">Database Systems</span>
+                        <span class="bg-navyDeep-900 border border-blueGray-800 text-slate-200 text-xs px-3 py-1.5 rounded-lg font-medium">System Automation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="analytics" class="py-20 bg-blueGray-900/40 border-y border-blueGray-850">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-extrabold text-white mb-2">Technical Expertise Analytics</h2>
+            <p class="text-slate-400 text-sm mb-12">Visual matrix showing proficiency scores across core software engineering domains.</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Chart Box -->
+                <div class="bg-blueGray-850 p-6 rounded-2xl border border-blueGray-800 shadow-xl">
+                    <h3 class="text-sm font-bold text-slate-200 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-pie text-purpleAccent-400"></i> Skill Distribution Matrix
+                    </h3>
+                    <div class="relative w-full h-80">
+                        <canvas id="skillsRadarChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Progress Bars -->
+                <div class="space-y-6">
+                    <h3 class="text-sm font-bold text-slate-200 mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-sliders text-purpleAccent-400"></i> Domain Competency Metrics
+                    </h3>
+
+                    <div>
+                        <div class="flex justify-between text-xs font-semibold mb-2">
+                            <span class="text-slate-200">Python & Data Structures</span>
+                            <span class="text-purpleAccent-400">90%</span>
+                        </div>
+                        <div class="w-full bg-navyDeep-950 h-2.5 rounded-full overflow-hidden border border-blueGray-800">
+                            <div class="bg-gradient-to-r from-purpleAccent-600 to-purpleAccent-400 h-full rounded-full" style="width: 90%;"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between text-xs font-semibold mb-2">
+                            <span class="text-slate-200">Data Verification & Management</span>
+                            <span class="text-purpleAccent-400">88%</span>
+                        </div>
+                        <div class="w-full bg-navyDeep-950 h-2.5 rounded-full overflow-hidden border border-blueGray-800">
+                            <div class="bg-gradient-to-r from-purpleAccent-600 to-purpleAccent-400 h-full rounded-full" style="width: 88%;"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between text-xs font-semibold mb-2">
+                            <span class="text-slate-200">Software Engineering Principles</span>
+                            <span class="text-purpleAccent-400">85%</span>
+                        </div>
+                        <div class="w-full bg-navyDeep-950 h-2.5 rounded-full overflow-hidden border border-blueGray-800">
+                            <div class="bg-gradient-to-r from-purpleAccent-600 to-purpleAccent-400 h-full rounded-full" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between text-xs font-semibold mb-2">
+                            <span class="text-slate-200">Database Systems</span>
+                            <span class="text-purpleAccent-400">82%</span>
+                        </div>
+                        <div class="w-full bg-navyDeep-950 h-2.5 rounded-full overflow-hidden border border-blueGray-800">
+                            <div class="bg-gradient-to-r from-purpleAccent-600 to-purpleAccent-400 h-full rounded-full" style="width: 82%;"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between text-xs font-semibold mb-2">
+                            <span class="text-slate-200">Problem Solving & Logic</span>
+                            <span class="text-purpleAccent-400">86%</span>
+                        </div>
+                        <div class="w-full bg-navyDeep-950 h-2.5 rounded-full overflow-hidden border border-blueGray-800">
+                            <div class="bg-gradient-to-r from-purpleAccent-600 to-purpleAccent-400 h-full rounded-full" style="width: 86%;"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bring-to-table" class="py-20 max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-extrabold text-white mb-2">What I Bring to the Table</h2>
+        <p class="text-slate-400 text-sm mb-12">Core value propositions and practical engineering capabilities I deliver to teams.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Item 1 -->
+            <div class="bg-blueGray-850 border border-blueGray-800 rounded-2xl p-8 hover:border-purpleAccent-500/50 transition-all flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-navyDeep-900 border border-blueGray-800 flex items-center justify-center text-purpleAccent-400 text-xl mb-6">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Full-Stack Web Dev</h3>
+                    <p class="text-slate-300 text-xs md:text-sm leading-relaxed">
+                        Responsive, modular, and scalable web solutions built with clean frontend architecture and seamless backend database integration.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="bg-blueGray-850 border border-blueGray-800 rounded-2xl p-8 hover:border-purpleAccent-500/50 transition-all flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-navyDeep-900 border border-blueGray-800 flex items-center justify-center text-purpleAccent-400 text-xl mb-6">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">System Automation</h3>
+                    <p class="text-slate-300 text-xs md:text-sm leading-relaxed">
+                        Streamlining repetitive operational workflows, data verification procedures, and automated database routines.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="bg-blueGray-850 border border-blueGray-800 rounded-2xl p-8 hover:border-purpleAccent-500/50 transition-all flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-navyDeep-900 border border-blueGray-800 flex items-center justify-center text-purpleAccent-400 text-xl mb-6">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">UI/UX & Responsive Design</h3>
+                    <p class="text-slate-300 text-xs md:text-sm leading-relaxed">
+                        Crafting intuitive interfaces, structured layouts, and adaptive cross-device user experiences with strong visual elegance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-20 bg-blueGray-900/40 border-y border-blueGray-850">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-extrabold text-white mb-2 text-center flex items-center justify-center gap-3">
+                <i class="fa-solid fa-graduation-cap text-purpleAccent-400"></i> Educational Background
+            </h2>
+            <p class="text-slate-400 text-sm mb-12 text-center">Academic path and studies in software engineering and sciences.</p>
+
+            <div class="relative pl-6 md:pl-8 border-l-2 border-blueGray-800 space-y-10">
+                
+                <!-- Edu 1 -->
+                <div class="relative">
+                    <span class="absolute -left-[31px] md:-left-[39px] top-1.5 w-4 h-4 bg-purpleAccent-400 rounded-full border-4 border-navyDeep-950"></span>
+                    <span class="text-xs font-semibold text-purpleAccent-400 uppercase tracking-wider">Current — 2024 to Present</span>
+                    <h3 class="text-xl font-bold text-white mt-1">BS in Software Engineering (BSSE - 4th Semester)</h3>
+                    <p class="text-sm font-medium text-purpleAccent-300">Indus University</p>
+                    <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                        Core studies covering Software Engineering principles, Data Structures & Algorithms, Database Systems, Object-Oriented Programming, and Web System Development.
+                    </p>
+                </div>
+
+                <!-- Edu 2 -->
+                <div class="relative">
+                    <span class="absolute -left-[31px] md:-left-[39px] top-1.5 w-4 h-4 bg-purpleAccent-400 rounded-full border-4 border-navyDeep-950"></span>
+                    <span class="text-xs font-semibold text-purpleAccent-400 uppercase tracking-wider">Completed</span>
+                    <h3 class="text-xl font-bold text-white mt-1">Intermediate Education</h3>
+                    <p class="text-sm font-medium text-purpleAccent-300">Bahria College</p>
+                    <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                        Pre-engineering curriculum focused on mathematics, physics, computer fundamentals, and analytical problem-solving.
+                    </p>
+                </div>
+
+                <!-- Edu 3 -->
+                <div class="relative">
+                    <span class="absolute -left-[31px] md:-left-[39px] top-1.5 w-4 h-4 bg-purpleAccent-400 rounded-full border-4 border-navyDeep-950"></span>
+                    <span class="text-xs font-semibold text-purpleAccent-400 uppercase tracking-wider">Completed</span>
+                    <h3 class="text-xl font-bold text-white mt-1">FSc / Secondary Schooling</h3>
+                    <p class="text-sm font-medium text-purpleAccent-300">Bahria School</p>
+                    <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                        Foundational science education with computer logic coursework.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-extrabold text-white mb-2">Projects & Academic Work</h2>
+        <p class="text-slate-400 text-sm mb-10">Software solutions, user dashboards, and algorithmic code repositories.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Project 1 -->
+            <div class="bg-blueGray-850 border border-blueGray-800 rounded-2xl p-6 flex flex-col justify-between hover:border-purpleAccent-500/50 transition-all">
+                <div>
+                    <span class="text-xs font-bold text-purpleAccent-400 uppercase tracking-wider">Database & Desktop App</span>
+                    <h3 class="text-xl font-bold text-white mt-2 mb-3">Hospital Management System Project</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed mb-6">
+                        Comprehensive patient management system with appointment scheduling, doctor allocation, and medical record database tracking.
+                    </p>
+                </div>
+                <a href="https://github.com" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-white bg-purpleAccent-600 hover:bg-purpleAccent-500 px-4 py-2.5 rounded-lg w-max transition-all shadow-md shadow-purpleAccent-500/20">
+                    View Project <i class="fa-brands fa-github text-sm"></i>
+                </a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bg-blueGray-850 border border-blueGray-800 rounded-2xl p-6 flex flex-col justify-between hover:border-purpleAccent-500/50 transition-all">
+                <div>
+                    <span class="text-xs font-bold text-purpleAccent-400 uppercase tracking-wider">Web Security & UI/UX</span>
+                    <h3 class="text-xl font-bold text-white mt-2 mb-3">Login Dashboard</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed mb-6">
+                        Secure user authentication dashboard featuring session state management, role-based access control, and responsive UI layout.
+                    </p>
+                </div>
+                <a href="https://github.com" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-white bg-purpleAccent-600 hover:bg-purpleAccent-500 px-4 py-2.5 rounded-lg w-max transition-all shadow-md shadow-purpleAccent-500/20">
+                    View Project <i class="fa-brands fa-github text-sm"></i>
+                </a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="bg-blueGray-850 border border-blueGray-800 rounded-2xl p-6 flex flex-col justify-between hover:border-purpleAccent-500/50 transition-all">
+                <div>
+                    <span class="text-xs font-bold text-purpleAccent-400 uppercase tracking-wider">Python & Algorithms</span>
+                    <h3 class="text-xl font-bold text-white mt-2 mb-3">Python Tree and Graphs Codes</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed mb-6">
+                        Algorithmic repository demonstrating custom binary tree implementations, graph traversal algorithms (BFS/DFS), and data structure optimizations.
+                    </p>
+                </div>
+                <a href="https://github.com" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-white bg-purpleAccent-600 hover:bg-purpleAccent-500 px-4 py-2.5 rounded-lg w-max transition-all shadow-md shadow-purpleAccent-500/20">
+                    View Project <i class="fa-brands fa-github text-sm"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact" class="py-16 bg-navyDeep-950 border-t border-blueGray-850 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-2xl font-bold text-white mb-2">Laiba Shahzad</h2>
+            <p class="text-xs text-slate-400 mb-6">Indus University, Karachi, Pakistan | laiba.shahzad@example.com</p>
+            
+            <div class="flex justify-center gap-6 text-sm mb-8">
+                <a href="https://linkedin.com" target="_blank" class="text-slate-300 hover:text-purpleAccent-400 transition-colors"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com" target="_blank" class="text-slate-300 hover:text-purpleAccent-400 transition-colors"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="mailto:laiba.shahzad@example.com" class="text-slate-300 hover:text-purpleAccent-400 transition-colors"><i class="fa-regular fa-envelope"></i> Email</a>
+            </div>
+
+            <p class="text-xs text-slate-400">© 2026 Laiba Shahzad. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-6 right-6 z-50">
+        <button id="aiToggle" class="bg-purpleAccent-600 hover:bg-purpleAccent-500 text-white font-bold p-4 rounded-full shadow-2xl shadow-purpleAccent-500/40 flex items-center justify-center text-xl transition-all active:scale-95">
+            <i class="fa-solid fa-robot"></i>
+        </button>
+        <div id="aiBox" class="hidden absolute bottom-16 right-0 w-80 md:w-96 bg-blueGray-850 border border-blueGray-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+            <div class="bg-navyDeep-950 p-4 border-b border-blueGray-850 flex justify-between items-center">
+                <span class="text-xs font-bold text-purpleAccent-400 uppercase tracking-wider flex items-center gap-2">
+                    <i class="fa-solid fa-bot"></i> Laiba's AI Assistant
+                </span>
+                <button id="aiClose" class="text-slate-400 hover:text-white text-xs"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div id="aiMessages" class="p-4 text-xs text-slate-200 leading-relaxed bg-blueGray-850 max-h-64 overflow-y-auto space-y-3">
+                <div class="bg-blueGray-800 p-3 rounded-xl border border-blueGray-700">
+                    Hello! I am Laiba's AI Assistant. Ask me about her BSSE studies at Indus University, her projects like the Hospital Management System, or her skills in Data Verification & System Automation!
+                </div>
+            </div>
+
+            <div class="p-3 border-t border-blueGray-800 bg-navyDeep-950 flex gap-2">
+                <input id="aiInput" type="text" placeholder="Ask about Laiba..." class="flex-1 bg-blueGray-850 border border-blueGray-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-purpleAccent-500">
+                <button id="aiSend" class="px-3 py-2 bg-purpleAccent-600 hover:bg-purpleAccent-500 text-white font-bold rounded-xl text-xs transition-colors">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // AI Chatbox toggle & message handlers
+        const toggle = document.getElementById('aiToggle');
+        const box = document.getElementById('aiBox');
+        const close = document.getElementById('aiClose');
+        const sendBtn = document.getElementById('aiSend');
+        const inputField = document.getElementById('aiInput');
+        const messagesDiv = document.getElementById('aiMessages');
+
+        toggle.addEventListener('click', () => box.classList.toggle('hidden'));
+        close.addEventListener('click', () => box.classList.add('hidden'));
+
+        function processMessage() {
+            const text = inputField.value.trim();
+            if (!text) return;
+
+            const userMsg = document.createElement('div');
+            userMsg.className = 'bg-purpleAccent-900/60 text-purpleAccent-200 border border-purpleAccent-700/50 p-2.5 rounded-xl ml-auto max-w-[85%] text-right';
+            userMsg.innerText = text;
+            messagesDiv.appendChild(userMsg);
+
+            inputField.value = '';
+
+            setTimeout(() => {
+                const botMsg = document.createElement('div');
+                botMsg.className = 'bg-blueGray-800 p-2.5 rounded-xl text-slate-200 border border-blueGray-700 max-w-[85%]';
+
+                const q = text.toLowerCase();
+                if (q.includes('project') || q.includes('hospital') || q.includes('login') || q.includes('tree') || q.includes('graph')) {
+                    botMsg.innerText = "Laiba's featured projects include: 1) Hospital Management System Project, 2) Secure Login Dashboard, and 3) Python Tree and Graphs Codes repository.";
+                } else if (q.includes('education') || q.includes('university') || q.includes('college') || q.includes('school')) {
+                    botMsg.innerText = "Laiba is in her 4th semester studying BSSE at Indus University. She completed Intermediate at Bahria College and schooling at Bahria School.";
+                } else if (q.includes('offer') || q.includes('bring') || q.includes('value') || q.includes('skill')) {
+                    botMsg.innerText = "Laiba brings Full-Stack Web Dev, System Automation, and UI/UX & Responsive Design capabilities along with specialized Data Verification skills.";
+                } else {
+                    botMsg.innerText = "Laiba Shahzad is a BSSE student at Indus University (4th Semester) specializing in System Automation, Data Verification, and Software Engineering.";
+                }
+
+                messagesDiv.appendChild(botMsg);
+                messagesDiv.scrollTop = messagesDiv.scrollHeight;
+            }, 300);
+        }
+
+        sendBtn.addEventListener('click', processMessage);
+        inputField.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') processMessage();
+        });
+
+        // Initialize Chart.js Radar Chart
+        document.addEventListener('DOMContentLoaded', () => {
+            const ctx = document.getElementById('skillsRadarChart').getContext('2d');
+            
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: [
+                        'Python & Data Structures',
+                        'Data Verification & Mgmt',
+                        'Software Engineering',
+                        'Database Systems',
+                        'Problem Solving'
+                    ],
+                    datasets: [{
+                        label: 'Proficiency Score (%)',
+                        data: [90, 88, 85, 82, 86],
+                        backgroundColor: 'rgba(168, 85, 247, 0.25)',
+                        borderColor: 'rgba(168, 85, 247, 1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(192, 132, 252, 1)',
+                        pointBorderColor: '#fff',
+                        pointHoverRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(255, 255, 255, 0.12)' },
+                            grid: { color: 'rgba(255, 255, 255, 0.12)' },
+                            pointLabels: { color: '#f1f5f9', font: { size: 10, weight: '500' } },
+                            ticks: { display: false, beginAtZero: true, max: 100 }
+                        }
+                    },
+                    plugins: { legend: { display: false } }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
